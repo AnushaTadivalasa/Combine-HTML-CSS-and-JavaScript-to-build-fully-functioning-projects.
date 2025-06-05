@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio & Product Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio & Product Store</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#products">Products</a>
+      <a href="#todo">To-Do List</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I am a passionate developer with skills in web development and UI design. I love building user-friendly apps and showcasing my projects.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Product Store with Wishlist & Cart</li>
+        <li>To-Do List with Local Storage</li>
+        <li>Responsive Portfolio Website</li>
+      </ul>
+    </section>
+
+    <section id="products">
+      <h2>Products</h2>
+
+      <div class="controls">
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing">Clothing</option>
+          <option value="accessories">Accessories</option>  
+          <option value="home">Home Appliances</option>     
+          <option value="beauty">Beauty Products</option>   
+        </select>
+
+        <select id="sortPrice">
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+
+      <div id="productList"></div>
+
+      <h3>Wishlist</h3>
+      <div id="wishlistItems"></div>
+
+      <div id="cartInfo">
+        <p>Cart Items: <span id="cartCount">0</span></p>
+        <p id="offerMessage">🛒 Add more items to unlock rewards!</p>
+      </div>
+    </section>
+
+    <section id="todo">
+      <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Add new task" />
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 My Portfolio & Product Store
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
